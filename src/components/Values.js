@@ -1,38 +1,41 @@
 import value from "../App";
+import "./card_border.css";
+import "./flex-componet.css";
 
-function Value({
-    title,
-    hp,
-    atk,
-    def,
-    flavor_text
-}){
+import Avatar from "@mui/material/Avatar";
+import { green, red, blue } from "@mui/material/colors";
 
-    return(
-      <div>
-            <h2>
-                {title}
-            </h2>
+function Value({ title, hp, atk, def, flavor_text }) {
+  return (
+    <div className="card_border">
+      <h2>{title}</h2>
+      <div className = "flex_componet">
+        <p>HP</p>
+        <Avatar sx={{ bgcolor: green[500] }}>{hp}</Avatar>
 
-            <h3>    
-                {hp}
-            </h3>
-
-            <div>
-            { flavor_text.map(
-                    (flavor_text)=>{
-                        return <li key={flavor_text}> {flavor_text} </li>
-                    }
-                )}
-            </div>
-
-            <ol>
-                <li>  {atk}  </li>
-                <li>  {def}  </li>
-            </ol>
       </div>
-    );
-}
 
+      <div>
+          Picture goes here
+      </div>
+
+
+
+      <div>
+        {flavor_text.map((flavor_text) => {
+          return <li key={flavor_text}> {flavor_text} </li>;
+        })}
+      </div>
+
+      <div className="flex_componet">
+            <Avatar sx={{ bgcolor: red[500] }}>{atk}</Avatar>
+            <p>ATK</p>
+            <Avatar sx={{ bgcolor: blue[500] }}>{def}</Avatar>
+            <p>DEF</p>
+      </div>
+
+    </div>
+  );
+}
 
 export default Value;

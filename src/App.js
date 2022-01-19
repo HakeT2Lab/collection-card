@@ -3,32 +3,32 @@ import Value from "./components/Values.js";
 
 //imported mui's
 import Grid from "@mui/material/Grid";
-import Avatar from "@mui/material/Avatar";
+
 
 function App() {
   const cards = [
     {
-      title: "Card-name",
-      hp: "???",
-      atk: "??",
-      def: "??",
-      flavor_text: ["Flavor-text", "Goes", "Here"],
+      title: "Queen Bee",
+      hp: "3400",
+      atk: "30",
+      def: "8",
+      flavor_text: ["Terror Of The Jungle", "Sure she's not a Hornet?", "Ahhhh... The Bees!!"],
     },
 
     {
-      title: "Card-name",
-      hp: "???",
-      atk: "??",
-      def: "??",
-      flavor_text: ["Flavor-text", "Goes", "Here"],
+      title: "Skeletron(Day)",
+      hp: "4400",
+      atk: "1000",
+      def: "9999",
+      flavor_text: ["Guardian Of The Dungeon", "The One Shot Boss", "Dont..."],
     },
 
     {
-      title: "Card-name",
-      hp: "???",
-      atk: "??",
-      def: "??",
-      flavor_text: ["Flavor-text", "Goes", "Here"],
+      title: "Guide",
+      hp: "250",
+      atk: "8",
+      def: "250",
+      flavor_text: ["Your First Friend", "Your Guide", "What Does This Doll Do?"],
     },
   ];
 
