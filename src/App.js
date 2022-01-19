@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Value from "./components/Values.js";
+
+//imported mui's
+import Grid from "@mui/material/Grid";
+import Avatar from "@mui/material/Avatar";
 
 function App() {
+  const cards = [
+    {
+      title: "Card-name",
+      hp: "???",
+      atk: "??",
+      def: "??",
+      flavor_text: ["Flavor-text", "Goes", "Here"],
+    },
+
+    {
+      title: "Card-name",
+      hp: "???",
+      atk: "??",
+      def: "??",
+      flavor_text: ["Flavor-text", "Goes", "Here"],
+    },
+
+    {
+      title: "Card-name",
+      hp: "???",
+      atk: "??",
+      def: "??",
+      flavor_text: ["Flavor-text", "Goes", "Here"],
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid container spacing={2}>
+      {
+        cards.map((card)=> {
+          return <Grid item xs={4}>
+            <Value
+              title={card.title}
+              hp={card.hp}
+              atk={card.atk}
+              def={card.def}
+              flavor_text={card.flavor_text}
+            />
+          </Grid>
+        })
+      }
+    </Grid>
   );
+
+  // return <Value title={card.title} hp={card.hp} atk={card.atk} def={card.def} flavor_text={card.flavor_text}  />;
 }
 
 export default App;
