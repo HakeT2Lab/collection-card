@@ -1,0 +1,11 @@
+.background{
+    background-color: blue;
+
+    border-radius: 10%;
+    resize: none;
+
+    overflow:auto;
+    resize:none;
+    width:260px;
+    height:410px;
+}

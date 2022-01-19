@@ -1,0 +1,15 @@
+.right{
+margin-left: 7%;;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center{
+    display:inline-flex;
+    align-content: center;
+}
+
