@@ -11,12 +11,20 @@ import "./stats_styles/name.css"
 
 import Avatar from "@mui/material/Avatar";
 import { green, red, blue } from "@mui/material/colors";
+import ReactDOM from 'react-dom';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 function Value({ title, hp, image, atk, def, flavor_text }) {
   return (
     <div className="background">
+  
       <div className="card_border">
-        <h2 className="name center">{title}</h2>
+        <h2 className="name center">
+          <Stack spacing={2} direction="row">
+            <Button variant="text">{title}</Button>          
+          </Stack>
+        </h2>
         <div className="flex_componet">
           <p className="right">HP</p>
           <Avatar sx={{ bgcolor: green[500] }}>{hp}</Avatar>
@@ -46,5 +54,19 @@ function Value({ title, hp, image, atk, def, flavor_text }) {
     </div>
   );
 }
+
+function myFunction() {
+  const test = () => {
+    alert("Test");
+  }
+
+  return (
+    <button onClick={test}>This is a test</button>
+  );
+}
+ReactDOM.render(<myFunction />, document.getElementById('root'));
+
+
+
 
 export default Value;
